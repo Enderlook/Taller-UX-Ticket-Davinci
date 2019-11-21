@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app" class="container rows space_between" style="width:300; height: 550">
+            <div class="rows" style="height: 90%">
+                <div ref="main" class="rows space_between superceller hideable" style="height: 100%">
+                    <div style="height:5%; flex-basis: 0; flex-grow: 0;"></div>
+                    <div class="columns space_between middle" style="height:10%; width: 100%">
+                        <div class="mark large">GOL</div>
+                        <div class="date">
+                            <span class="medium">10/2/16</span>
+                            <span>Míercoles 10 de Febrero</span>
+                        </div>
+                    </div>
+                    <div class="columns space_between full_width celler">
+                        <div class="rows centered full_width cell">
+                            <div class="header">Embarque</div>
+                            <div class="rows">
+                                <div class="medium">19:00</div>
+                                <div class="tiny">-</div>
+                                <div class="medium">19:45</div>
+                            </div>
+                        </div>
+                        <div class="rows centered full_width cell">
+                            <div class="header">Puerta</div>
+                            <div class="huge">7</div>
+                        </div>
+                        <div class="rows centered full_width cell">
+                            <div class="header">Asiento</div>
+                            <div class="huge">22E</div>
+                        </div>
+                    </div>
+                    <div class="columns space_between full_width celler">
+                        <div class="rows centered full_width cell">
+                            <div class="header">Salida</div>
+                            <div class="rows">
+                                <div class="medium">POA</div>
+                                <div class="tiny">Porto Alegre</div>
+                                <div class="medium">20:00</div>
+                            </div>
+                        </div>
+                        <div class="rows centered full_width cell">
+                            <div class="header">Llegada</div>
+                            <div class="rows">
+                                <div class="medium">FLN</div>
+                                <div class="tiny">Florianpolis</div>
+                                <div class="medium">20:50</div>
+                            </div>
+                        </div>
+                        <div class="rows centered full_width cell">
+                            <div class="header">Grupo de Embarque</div>
+                            <div class="huge">2</div>
+                        </div>
+                    </div>
+                    <div class="columns space_around celler" style="width: 100%; border: none">
+                        <div style="margin-right: 5; boder: none; flex-grow: 0.5;">
+                            <button class="button mark small" v-on:click="toggleQR">QR</button>
+                        </div>
+                        <div class="rows space_between centered cell status">
+                            <div class="header">Estado</div>
+                            <div class="medium" style="background-color: aquamarine">En Camino <span>(15')</span></div>                        
+                        </div>
+                    </div>
+                </div>
+                <div ref="popup" class="rows space_between hideable hidden">
+                    <div class="header huge centered">Código QR</div>
+                    <img src="qr-code.png" width="100%"/>
+                </div>
+            </div>
+            <div class="grid" style="justify-content: flex-end; height: 10%; padding-top: 5;">
+                <button class="menu_button" v-on:click="menu">
+                    <img src="https://image.flaticon.com/icons/svg/25/25694.svg" width="50%"/>
+                </button>
+                <button class="menu_button" v-on:click="menu">
+                    <img src="https://image.flaticon.com/icons/svg/151/151882.svg" width="50%"/>
+                </button>
+                <button class="menu_button" v-on:click="menu">
+                    <img src="https://image.flaticon.com/icons/svg/271/271218.svg" width="50%"/>
+                </button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
